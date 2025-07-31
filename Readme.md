@@ -3,6 +3,6 @@
 > Status do Projeto: em desenvolvimento
 
 ```
-para rodar este projeto na ua máquina, por favor digite:
+para rodar este projeto na sua máquina, por favor digite:
 
 ```
