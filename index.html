@@ -1,3 +1,103 @@
-<h1>Página Home</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-<h2>Sua lista de Tarefa</h2>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Jogo de Perguntas</title>
+<style>
+
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #1f1f1f;
+    color: #59bd4f;
+    text-align: center;
+    padding: 30px;
+  }
+
+  
+  h1 {
+    font-size: 2em;
+    color: #a30db1;
+    margin-bottom: 8px;
+  }
+
+  .pergunta {
+    background: #1f1f1f;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 16px auto;
+    max-width: 500px;
+  }
+
+  button {
+    background: #a30db1;
+    color: #74e9a9;
+    padding: 10px 24px;
+    border-radius: 0px;
+    font-size: 1en;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 6px;
+  }
+
+  button:hover{
+    background: #215737;
+  }
+ 
+ .feedback {
+    font-weight: bold;
+    margin-top: 8px;
+    font-size: 1.1en;
+ }
+
+ #resultado {
+    font-size: 1.4en;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #f1f1f1;
+ }
+
+
+</style>
+
+</head>
+
+<body>
+
+  <h1>🎮 Jogo de Perguntas</h1>
+  <p>Responda as perguntas e veja sua pontuação!</p>
+
+  <div id="jogo">
+
+    <!-- PERGUNTA 1 -->
+    <div class="pergunta">
+      <p>1. A tag &lt;p&gt; precisa ser fechada com &lt;/p&gt;?</p>
+      <button onclick="responder(1, true)">Verdadeiro</button>
+      <button onclick="responder(1, false)">Falso</button>
+      <p id="feedback1"></p>
+    </div>
+
+    <!-- PERGUNTA 2 -->
+    <div class="pergunta">
+      <p>2. CSS serve para definir a estrutura da página?</p>
+      <button onclick="responder(2, true)">Verdadeiro</button>
+      <button onclick="responder(2, false)">Falso</button>
+      <p id="feedback2"></p>
+    </div>
+
+    <!-- PERGUNTA 3 -->
+    <div class="pergunta">
+      <p>3. JavaScript é uma linguagem de programação?</p>
+      <button onclick="responder(3, true)">Verdadeiro</button>
+      <button onclick="responder(3, false)">Falso</button>
+      <p id="feedback3"></p>
+    </div>
+
+    <button onclick="verResultado()">Ver minha pontuação</button>
+    <p id="resultado"></p>
+
+  </div>
+
+</body>
+</html>
