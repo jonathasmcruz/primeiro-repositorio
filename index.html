@@ -99,5 +99,47 @@
 
   </div>
 
+  <script>
+
+let pontos = 0;
+
+let gabarito = {
+  1: true,
+  2: false,
+  3: true
+};
+
+
+function responder(numero, resposta) {
+
+
+  let feedback = document.getElementById("feedback" + numero);
+
+
+  if(resposta === gabarito[numero]) {
+    feedback. textContent = "✅ Certo! +1 ponto"
+    feedback.style.color = "#39d353"
+    pontos = pontos + 1;
+  } else {
+    feedback.textContent= "❌ Errado";
+    feedback.style.color = "#eo6346"
+  }
+}
+
+function verResultado(){
+  let resultado = document.getElementById("resultado");
+
+  if(pontos === 3){
+    resultado.textContent = "🏆 Perfeito! Você acertou tudo!" + pontos + "/3";
+  } else if (pontos === 2) {
+    resultado.textContent "😊 Muito bem! você acertou " + pontos + "/3"
+  } else if (pontos === 1) {
+    Resultado.textContent "😐 Pode melhorar! você acertou " + pontos + "/3"
+  } else {
+    Resultado.textContent "🤦‍♂️Não acertou nenhuma! Pontos: " + pontos + "/3"
+  }
+}
+  </script>
+
 </body>
 </html>
